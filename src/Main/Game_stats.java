@@ -14,7 +14,7 @@ public class Game_stats extends Observer{
 	
 	// CONSTANTS FOR SIZES OF THE PLAY SCREEN - STARTS HERE //
 	
-	public static int unit = 20; 
+	public static int unit = 30; 
 	public static int offset = 10; 
 
 	public static int game_score_heigth = (unit*3)/2;
@@ -26,8 +26,8 @@ public class Game_stats extends Observer{
 	public static int default_y_position = number_per_height/2;
 
 	public static int game_width =  number_per_width*unit+(number_per_width+1)*offset;//+unit/2+offset;
-	public static int game_height = game_score_heigth + number_per_height*unit+(number_per_height+1)*offset;//+unit*3/2;
-
+	public static int game_height = game_score_heigth + number_per_height*unit+(number_per_height+1)*offset;//+unit*3/2; 
+ 
 	// CONSTANTS FOR SIZES OF THE PLAY SCREEN - ENDS HERE //
 	
 	// VARIABLE THAT CHANGES WITH THE GAME AND THEIR DEFAULT VALUES - STARTS HERE //
@@ -37,8 +37,8 @@ public class Game_stats extends Observer{
 	public static int default_time = 30;
 	public static int current_time = 30;
 
-	public static int default_enemies_number = 40;
-	public static int current_enemies_number = 40;
+	public static int default_enemies_number = 50;
+	public static int current_enemies_number = 50;
 
 	public static int default_points_number = 5;
 	public static int current_points_number = 5;
@@ -91,7 +91,7 @@ public class Game_stats extends Observer{
 
 					// Add the points and time for collecting a Point Entity;
 					Game_stats.current_score += Game_stats.point_value;
-					Game_stats.current_time += 1;
+					//Game_stats.current_time += 1;
 
 					break;
 				}
@@ -126,7 +126,7 @@ public class Game_stats extends Observer{
 		{
 			jumping_tiles = 1;
 			this.player.setState(this.player.IDLE);
-			this.player.color = Color.GREEN.brighter();
-		}
+			this.player.color = Color.GREEN;
+		} 
 	}
 }
