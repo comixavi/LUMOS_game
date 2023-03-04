@@ -14,8 +14,8 @@ public class Game_stats extends Observer{
 	
 	// CONSTANTS FOR SIZES OF THE PLAY SCREEN - STARTS HERE //
 	
-	public static int unit = 25; 
-	public static int offset = 5; 
+	public static int unit = 20; 
+	public static int offset = 10; 
 
 	public static int game_score_heigth = (unit*3)/2;
 
@@ -126,7 +126,7 @@ public class Game_stats extends Observer{
 		{
 			jumping_tiles = 1;
 			this.player.setState(this.player.IDLE);
-			this.player.color = Color.GREEN;
+			this.player.color = Color.GREEN.brighter();
 		}
 	}
 }

@@ -33,7 +33,7 @@ public class Entity {
 		this.x_tile = x; 
 		this.y_tile = y;
 
-		this.color = color;
+		this.color = color.brighter();
 
 		this.entity_size = size;
 	}
