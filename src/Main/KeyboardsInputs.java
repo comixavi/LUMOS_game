@@ -6,6 +6,8 @@ import java.awt.event.KeyListener;
 public class KeyboardsInputs implements KeyListener{
 	
 	private GamePanel game_panel;
+	private boolean isRunning, isJumping;	// states
+	private boolean up, down, left, right; 	// direction
 	
 	public KeyboardsInputs(GamePanel gamePanel)
 	{
@@ -64,8 +66,12 @@ public class KeyboardsInputs implements KeyListener{
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
+		if(e.getKeyCode() == KeyEvent.VK_W || e.getKeyCode() == KeyEvent.VK_UP) 	up 		= 	false;
+		if(e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_DOWN) 	down 	= 	false;
+		if(e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_LEFT) 	left 	= 	false;
+		if(e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_RIGHT) 	right 	= 	false;
 		
+		if(e.getKeyCode() == KeyEvent.VK_SPACE) isJumping = false;
+		if(e.getKeyCode() == KeyEvent.VK_SHIFT) isRunning = false;
 	}
-
 }
