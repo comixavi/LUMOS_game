@@ -33,7 +33,7 @@ public class Game_stats extends Observer{
 	// VARIABLE THAT CHANGES WITH THE GAME AND THEIR DEFAULT VALUES - STARTS HERE //
 	public static int default_score = 0; 
 	public static int current_score = 0;
-
+	
 	public static int default_time = 30;
 	public static int current_time = 30;
 
