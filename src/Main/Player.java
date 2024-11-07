@@ -7,7 +7,7 @@ import java.util.List;
 public class Player extends Entity{
 
 	// The Player has a list of observers;
-	private List<Observer> observers = new ArrayList<Observer>();
+	private List<Observer> observers = new ArrayList<>();
 	
 	// The Player has a state;
 	private int state;
@@ -57,8 +57,8 @@ public class Player extends Entity{
 
 	}
 
-	// Generating a player with its default color and size, at the given position;
-	Player(int x, int y) {
-		super(x, y,  Color.GREEN, Game_stats.unit);
-	}
+	// // Generating a player with its default color and size, at the given position, non used method;
+	// Player(int x, int y) {
+	// 	super(x, y,  Color.GREEN, Game_stats.unit);
+	// }
 }
